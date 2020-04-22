@@ -13,9 +13,7 @@ print(df_1)
 
 #need to reverse the order since this is from newest cases to oldest
 df_1 = df_1[::-1]
-
 df_1.head()
-
 
 
 
@@ -38,9 +36,9 @@ import matplotlib.pyplot as plt
 #keeps graphs stationary inside IDE
 %matplotlib inline
 
-
-
-
+#Declares Variables
+X = pd.DataFrame(df_1['Positive'])
+y = pd.DataFrame(df_1['Deaths'])
 
 
 
@@ -62,8 +60,6 @@ plt.ylabel('Cases')#y-label
 
 #Linear Regression of COVID19 Data
 #Wanting to see positive Correlation with Positive Cases and Deaths
-X = pd.DataFrame(df_1['Positive'])
-y = pd.DataFrame(df_1['Deaths'])
 model = LinearRegression()
 model.fit(X, y)
 model = LinearRegression().fit(X, y)
